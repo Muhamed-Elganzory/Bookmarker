@@ -37,10 +37,12 @@ var sitesList = [];
  * 
  * - Checks if local storage contains site data, If data exists, it loads the sites and displays them.
  */
-if (localStorage.getItem('Sites')) {
-    sitesList = JSON.parse(localStorage.getItem('Sites'));
-    displaySites();
-}
+(function () {
+    if (localStorage.getItem('Sites')) {
+        sitesList = JSON.parse(localStorage.getItem('Sites'));
+        displaySites();
+    }
+})();
 
 /**
  * 
