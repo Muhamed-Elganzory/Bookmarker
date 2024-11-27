@@ -1,0 +1,56 @@
+/**** General Style ****/
+::selection {
+    background-color: orange;
+}
+
+body {
+    background-color: #F7ECDE !important;
+    font-family: "PT Sans Caption";
+}
+
+/** Font First Title **/
+@font-face {
+    font-family: "Pacifico";
+    src: url(../Fonts/First\ Title/Pacifico-Regular.ttf);
+}
+
+/** Font Second Title **/
+@font-face {
+    font-family: "Righteous";
+    src: url(../Fonts/Second\ Title/Righteous-Regular.ttf);
+}
+
+/** Main Font **/
+@font-face {
+    font-family: "PT Sans Caption";
+    src: url(../Fonts/Main\ Font/PTSansCaption-Regular.ttf);
+}
+
+.font-first-title {
+    font-family: "Pacifico";
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: #352e28;
+}
+
+.font-second-title {
+    font-family: "Righteous";
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.label-font {
+    font-weight: 600;
+    line-height: 24px;
+    color: #212529;
+}
+
+.fs-18 {
+    font-size: 18px !important;
+}
+
+.btn-close {
+    --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(255, 166, 0, 0.747) !important;
+}

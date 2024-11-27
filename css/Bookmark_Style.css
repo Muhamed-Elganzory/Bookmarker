@@ -1,0 +1,72 @@
+/** ==== Link General Style ==== **/
+@import url(./General\ Style.css);
+
+/**** Header Section ****/
+/*^ First Title */
+.first-title {
+    width: fit-content;
+}
+
+.first-title::after {
+    content: '';
+    background-color: orange;
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    transition: height 0.5s ease-in-out;
+}
+
+.first-title:hover.first-title::after {
+    height: 67%;
+}
+
+/**** Form Section ****/
+/*^ Second Title */
+.second-title {
+    background: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*^ Form */
+.form-section {
+    border-left: 0;
+    border-right: 0;
+    border-top: #352E28;
+    border-style: dotted;
+}
+
+.form-control:focus {
+    color: #212529 !important;
+    background-color: #fff !important;
+    border-color: #d99c39 !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0.25rem #fec26055 !important;
+}
+
+/*^ Button Submit */
+.btn-submit {
+    background-color: #d6502b !important;
+}
+
+.btn-submit:hover {
+    background-color: #d1512d;
+}
+
+/*^ Button Submit */
+.btn-font {
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/**** Table Section ****/
+/*^ Table Heading */
+.table-heading {
+    font-weight: 700;
+    color: #212529;
+}

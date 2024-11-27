@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="./images/bookmark.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/Bookmark_Style.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+</head>
+
+<body>
+    <main class="pt-5 pb-5">
+        <!--^ Title Site -->
+        <header>
+            <div class="container pt-2">
+                <div class="first-title text-center position-relative m-auto mb-5">
+                    <h1 class="font-first-title">Bookmarker</h1>
+                </div>
+            </div>
+        </header>
+        <!--^ Form Input -->
+        <article class="p-3">
+            <div class="container">
+                <div class="container form-section">
+                    <div class="second-title text-center pt-4">
+                        <h2 class="font-second-title"><i class="fa fa-bookmark pe-2"></i>Bookmark your favorite sites<i
+                                class="fa fa-bookmark ps-2"></i>
+                        </h2>
+                    </div>
+                    <form class=" pt-4 pb-4">
+                        <label for="" class="label-font form-label"><i class="fa-solid fa-book-bookmark pe-2"></i>Site
+                            Name</label>
+                        <input type="text" class="form-control" placeholder="Bookmark Name" id="bookmarkName"
+                            oninput="validationData(this)">
+                        <label for="" class="label-font form-label pt-4"><i class="fa-solid fa-link pe-2"></i>Site
+                            URL</label>
+                        <input type="url" class="form-control" placeholder="Website URL" id="bookmarkURL"
+                            oninput="validationData(this)">
+                        <button type="button" onclick="addSite()" id="btnSubmit"
+                            class="btn btn-submit btn-danger btn-font mt-4 m-auto d-block ps-5 pe-5">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </article>
+        <!--^ Table -->
+        <section class="pt-2">
+            <div class="container">
+                <table class="table text-center align-middle">
+                    <thead class="table-heading">
+                        <tr>
+                            <th scope="col">Index</th>
+                            <th scope="col">Website Name</th>
+                            <th scope="col">Visit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!--^ Modal -->
+        <article>
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">
+                                <i class="fa fa-circle" style="color: red;"></i>
+                                <i class="fa fa-circle" style="color: orange;"></i>
+                                <i class="fa fa-circle" style="color: green;"></i>
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex align-items-center">
+                                <div class="row">
+                                    <p id="titleMessage" class="m-0 pb-4 lead fw-bolder"></p>
+                                    <div class="pb-2">
+                                        <i class="fa-regular fa-circle-right pe-2 lead d-inline-block" style="color: #bb4120"></i>
+                                        <i id="modalFirstMessage" class="fs-18 text-muted"></i>
+                                    </div>
+                                    <div class="pb-2">
+                                        <i class="fa-regular fa-circle-right pe-2 lead d-inline-block" style="color: #bb4120"></i>
+                                        <i id="modalSecondMessage" class="fs-18 text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/Bookmark_Script.js"></script>
+</body>
+
+</html>
